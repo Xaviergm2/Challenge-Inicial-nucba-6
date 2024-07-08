@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #2c2f33;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("path/to/your/image.png"); /* Añadir la imagen de fondo */
+  background-size: cover;
+  background-position: center;
+}
+
+.faq-container {
+  background: rgba(44, 47, 51, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  overflow: hidden;
+  width: 90%;
+}
+
+.faq-content {
+  padding: 30px;
+}
+
+.faq-content h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #7289da;
+}
+
+.faq-item {
+  border-top: 1px solid #ffffff;
+  padding: 15px 0;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 18px;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px 0;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #dcdcdc;
+}
+
+.faq-question:after {
+  content: "\002B"; /* Plus sign */
+  font-size: 20px;
+  color: #7289da;
+}
+
+.faq-question.active:after {
+  content: "\2212"; /* Minus sign */
+}
+
+.faq-question.active + .faq-answer {
+  display: block;
+}
